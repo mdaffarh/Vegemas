@@ -8,10 +8,9 @@ img {
 }
 
 body {
-  background: #f5f5f5;
+  background: white;
   font-size: 18px;
   font-family: "Josefin Sans", sans-serif;
-  margin: 50px;
 }
 
 /* Container */
@@ -22,10 +21,13 @@ body {
 
 /* Header */
 .header {
+  box-sizing: border-box;
+  margin: 95px 25px 10px 25px;
   display: grid;
   grid-template-areas:
     "hero hero feature-1"
     "hero hero feature-2";
+  box-shadow: 0 0 10px 0 rgb(0 0 0 / 25%);
 }
 
 .hero {
@@ -73,10 +75,16 @@ body {
 
 /* Nav */
 .menu {
+  position: fixed;
+  z-index: 99;
   order: -1;
   display: grid;
   grid-template-columns: 1fr 2fr;
   align-items: center;
+  width: 100%;
+  background-color: white;
+  padding: 20px 0px 20px 50px;
+  box-shadow: 0 0 10px 0 rgb(0 0 0 / 25%);
 }
 
 .menu .brand {
@@ -88,6 +96,7 @@ body {
   list-style: none;
   grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
   gap: 5px;
+  padding-right: 100px;
 }
 
 .menu a {
@@ -157,7 +166,6 @@ body {
 
 /* About */
 .about {
-  margin: 0px -50px;
   background-color: white;
   border-radius: 3px;
   display: grid;
@@ -181,9 +189,15 @@ body {
 
 /* Products */
 .products {
+  margin: 50px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 20px;
+}
+.products h1 {
+  color: #006400;
+  text-align: center;
+  grid-column: 1/-1;
 }
 
 .product {
@@ -219,11 +233,22 @@ body {
 /* Responsive Breakpoint */
 @media (max-width: 1024px) {
   .menu {
+    box-sizing: border-box;
+    position: static;
     order: inherit;
     grid-template-columns: 1fr;
+    box-shadow: none;
+    padding-left: 0px;
+    padding: 0px 20px;
+  }
+  .menu ul {
+    padding-right: 0;
   }
   .menu .brand {
     display: none;
+  }
+  .header {
+    margin-top: 20px;
   }
   .hero > * {
     display: block;
@@ -248,9 +273,11 @@ body {
 }
 @media (max-width: 768px) {
   .menu {
+    padding-top: 20px;
     order: -1;
     justify-items: end;
   }
+
   .menu-toggle {
     display: flex;
     z-index: 10;
@@ -281,9 +308,6 @@ body {
   }
 }
 @media (max-width: 600px) {
-  body {
-    margin: 15px;
-  }
   .header {
     grid-template-areas:
       "hero"
