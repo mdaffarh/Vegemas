@@ -179,14 +179,14 @@ body {
   font-size: 1.3em;
 }
 
-/* Services */
-.services {
+/* Products */
+.products {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 20px;
 }
 
-.service {
+.product {
   background-color: white;
   padding: 15px;
   text-align: center;
@@ -195,11 +195,11 @@ body {
   box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
 }
 
-.service .icon {
+.product .icon {
   font-size: 3em;
 }
 
-.service h3 {
+.product h3 {
   font-size: 1.5em;
 }
 
