@@ -12,9 +12,10 @@
   </head>
   <body id="home">
     <div class="container">
+      <!-- Header Start -->
       <header class="header">
         <div class="hero">
-          <h2 class="heading"><img src="img/Logo.png" alt="Logo VegeMAS" /></h2>
+          <h2 class="heading"><img src="img/Logo.png" alt="VegeMAS Logo" /></h2>
           <p class="sub-heading">Pure Natural Healthy Food.</p>
         </div>
         <div class="features feature-1">
@@ -26,7 +27,9 @@
           <p class="desc">Sayuran campur.</p>
         </div>
       </header>
+      <!-- Header End -->
 
+      <!-- Nav Start -->
       <nav class="menu">
         <div class="menu-toggle">
           <input type="checkbox" name="" id="" />
@@ -35,22 +38,24 @@
           <span></span>
         </div>
         <div class="brand">
-          <img src="img/Logo.png" alt="Logo VegeMAS" />
+          <img src="img/Logo.png" alt="VegeMAS Logo" />
         </div>
         <ul class="menu-list">
           <li><a href="#home">Home</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#product">Product</a></li>
-          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
+      <!-- Nav End -->
 
+      <!-- About Start -->
       <section class="about" id="about">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
           <path
             fill="#006400"
             fill-opacity="1"
-            d="M0,0L26.7,42.7C53.3,85,107,171,160,218.7C213.3,267,267,277,320,277.3C373.3,277,427,267,480,234.7C533.3,203,587,149,640,128C693.3,107,747,117,800,138.7C853.3,160,907,192,960,208C1013.3,224,1067,224,1120,186.7C1173.3,149,1227,75,1280,69.3C1333.3,64,1387,128,1413,160L1440,192L1440,0L1413.3,0C1386.7,0,1333,0,1280,0C1226.7,0,1173,0,1120,0C1066.7,0,1013,0,960,0C906.7,0,853,0,800,0C746.7,0,693,0,640,0C586.7,0,533,0,480,0C426.7,0,373,0,320,0C266.7,0,213,0,160,0C106.7,0,53,0,27,0L0,0Z"
+            d="M0,224L48,208C96,192,192,160,288,165.3C384,171,480,213,576,218.7C672,224,768,192,864,176C960,160,1056,160,1152,176C1248,192,1344,224,1392,240L1440,256L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"
           ></path>
         </svg>
         <h1>About Us</h1>
@@ -62,11 +67,13 @@
           <path
             fill="#006400"
             fill-opacity="1"
-            d="M0,0L26.7,42.7C53.3,85,107,171,160,218.7C213.3,267,267,277,320,277.3C373.3,277,427,267,480,234.7C533.3,203,587,149,640,128C693.3,107,747,117,800,138.7C853.3,160,907,192,960,208C1013.3,224,1067,224,1120,186.7C1173.3,149,1227,75,1280,69.3C1333.3,64,1387,128,1413,160L1440,192L1440,320L1413.3,320C1386.7,320,1333,320,1280,320C1226.7,320,1173,320,1120,320C1066.7,320,1013,320,960,320C906.7,320,853,320,800,320C746.7,320,693,320,640,320C586.7,320,533,320,480,320C426.7,320,373,320,320,320C266.7,320,213,320,160,320C106.7,320,53,320,27,320L0,320Z"
+            d="M0,192L48,176C96,160,192,128,288,138.7C384,149,480,203,576,208C672,213,768,171,864,160C960,149,1056,171,1152,192C1248,213,1344,235,1392,245.3L1440,256L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
           ></path>
         </svg>
       </section>
+      <!-- About End -->
 
+      <!-- Product Start -->
       <section class="products" id="product">
         <h1>Our Product</h1>
         <div class="product product-1">
@@ -80,12 +87,53 @@
           <p>Sayuran campur.</p>
         </div>
       </section>
+      <!-- Product End -->
 
-      <section class="gallery" id="gallery">
-        <h1>Gallery</h1>
-        <div class="picture picture-1"></div>
+      <!-- Contact Start -->
+      <section class="contact" id="contact">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+          <path
+            fill="#006400"
+            fill-opacity="1"
+            d="M0,320L48,293.3C96,267,192,213,288,186.7C384,160,480,160,576,176C672,192,768,224,864,202.7C960,181,1056,107,1152,101.3C1248,96,1344,160,1392,192L1440,224L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"
+          ></path>
+        </svg>
+        <h1>Contact Form</h1>
+        <form action="POST">
+          <h4>Name</h4>
+          <input type="text" name="name" size="50" placeholder="Name" />
+          <h4>Email</h4>
+          <input type="email" name="email" placeholder="email@address.com" />
+          <h4>Message</h4>
+          <textarea name="comment" id="" cols="50" rows="10" placeholder="Leave a message..."></textarea><br />
+          <input type="submit" name="submit" value="Submit" />
+        </form>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+          <path
+            fill="#006400"
+            fill-opacity="1"
+            d="M0,192L48,176C96,160,192,128,288,138.7C384,149,480,203,576,208C672,213,768,171,864,160C960,149,1056,171,1152,192C1248,213,1344,235,1392,245.3L1440,256L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+          ></path>
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+          <path
+            fill="#006400"
+            fill-opacity="1"
+            d="M0,224L48,218.7C96,213,192,203,288,181.3C384,160,480,128,576,149.3C672,171,768,245,864,256C960,267,1056,213,1152,197.3C1248,181,1344,203,1392,213.3L1440,224L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"
+          ></path>
+        </svg>
       </section>
-      <footer></footer>
+      <!-- Contact End  -->
+
+      <!-- Footer Start -->
+      <footer>
+        <img src="img/Logo.png" alt="Logo VegeMAS" class="logo" />
+        <a href="https://www.instagram.com/vegemas/" target="_blank" class="social"><img src="img/insta.png" alt="Instagram Logo" /></a>
+        <div class="creator">
+          <p>Created by <a href="https://instagram.com/m_daffarh" target="_blank"> MDRH</a></p>
+        </div>
+      </footer>
+      <!-- Footer End  -->
     </div>
     <script src="script.js"></script>
   </body>
