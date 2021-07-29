@@ -14,6 +14,26 @@ body {
   font-family: "Josefin Sans", sans-serif;
 }
 
+/* Scroll Bar */
+html {
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 100, 0, 0.8);
+  border-radius: 3px;
+
+  transition: all 0.3s;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #006400;
+}
+
 /* Container */
 .container {
   display: grid;
@@ -107,7 +127,7 @@ body {
 .menu a {
   display: block;
   padding: 10px;
-  background-color: rgba(0, 100, 0, 0.9);
+  background-color: rgba(0, 100, 0, 1);
   border-radius: 3px;
 
   font-size: 0.8em;
@@ -115,10 +135,12 @@ body {
   text-transform: uppercase;
   text-decoration: none;
   text-align: center;
+
+  transition: all 0.2s;
 }
 
 .menu a:hover {
-  background-color: rgba(0, 100, 0, 1);
+  background-color: rgba(0, 100, 0, 0.8);
 }
 
 /* Hamburger Menu */
@@ -210,7 +232,7 @@ body {
 .products {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  justify-items: center;
+  place-items: center;
   gap: 20px;
   margin: 50px;
   padding-top: 100px;
@@ -230,6 +252,8 @@ body {
   background-color: white;
   border-radius: 3px;
   box-shadow: 0 0 10px 0 rgb(0 0 0 / 25%);
+
+  cursor: pointer;
 }
 
 .product h3 {
@@ -245,9 +269,15 @@ body {
 /* Contact Form */
 .contact {
   display: grid;
-  justify-items: center;
+  place-items: center;
 
   color: #197419;
+}
+
+#contact {
+  z-index: 2;
+  position: relative;
+  bottom: 140px;
 }
 
 .contact h1 {
@@ -305,10 +335,9 @@ input[type="submit"] {
   color: white;
 
   cursor: pointer;
-  opacity: 0.8;
 }
 input[type="submit"]:hover {
-  opacity: 1;
+  opacity: 0.9;
 }
 
 /* Footer */
@@ -331,12 +360,14 @@ footer {
 .social {
   grid-area: social;
   width: 4%;
+  background-color: white;
 
   transition: all 0.5s;
 }
 
 .social:hover {
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: rgb(0, 0, 0, 0.1);
+  border-radius: 10px;
 }
 
 .creator {
@@ -383,14 +414,15 @@ footer {
     align-items: start;
   }
 
+  .product {
+    width: 80%;
+  }
+
   .heading {
     background-color: white;
     border-radius: 3px;
   }
 
-  .products {
-    width: 90%;
-  }
   input[type="submit"] {
     width: 20%;
   }
@@ -442,6 +474,13 @@ footer {
     z-index: 1;
   }
 
+  .menu a {
+    transition: all 0.3s;
+  }
+
+  .menu a:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+  }
   .menu ul.slide {
     opacity: 1;
     transform: translateY(0);
@@ -452,9 +491,11 @@ footer {
   }
   .products {
     grid-template-columns: 1fr;
-    width: 65%;
     gap: 20px;
-    padding-top: 0px;
+  }
+  .product {
+    width: 60%;
+    place-items: center;
   }
   .logo {
     grid-area: logo;
@@ -485,6 +526,9 @@ footer {
   .products {
     width: 100%;
     justify-self: center;
+  }
+  .product {
+    width: 70%;
   }
   .logo {
     grid-area: logo;
