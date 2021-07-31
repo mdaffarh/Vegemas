@@ -291,6 +291,64 @@ html {
   width: 65%;
   padding-top: 20px;
 }
+/* Alert and Loading */
+.my-alert {
+  display: none;
+  place-items: center;
+  width: 65%;
+  padding: 20px;
+  margin: 20px;
+
+  box-sizing: border-box;
+  border-radius: 3px;
+}
+
+.btn-close {
+  margin-left: 400px;
+  height: 20px;
+  background-color: none;
+}
+
+.my-alert button[type="button"] {
+  background-color: rgba(0, 100, 0, 0);
+  border: none;
+  cursor: pointer;
+}
+
+.btn-close span {
+  display: block;
+  width: 25px;
+  height: 2px;
+  background-color: #006400;
+  border-radius: 3px;
+  margin: 2px;
+}
+
+.btn-close span:nth-child(1) {
+  transform: rotate(45deg) translate(3px, 3px);
+}
+
+.btn-close span:nth-child(2) {
+  transform: rotate(-45deg) translate(-1px, 0px);
+}
+
+.btn-loading {
+  display: none;
+  box-sizing: border-box;
+  width: 10%;
+  padding: 10px 10px;
+  background-color: #006400;
+  border: none;
+  border-radius: 3px;
+  box-shadow: 0 0 5px 0 rgb(0 0 0 / 25%);
+
+  font-family: inherit;
+  color: white;
+
+  cursor: pointer;
+}
+
+/* Form */
 
 input[type="text"],
 select,
@@ -322,7 +380,7 @@ textarea {
   resize: none;
 }
 
-input[type="submit"] {
+.btn-send {
   box-sizing: border-box;
   width: 10%;
   padding: 10px 10px;
@@ -336,7 +394,7 @@ input[type="submit"] {
 
   cursor: pointer;
 }
-input[type="submit"]:hover {
+.btn-send:hover {
   opacity: 0.9;
 }
 
@@ -423,7 +481,7 @@ footer {
     border-radius: 3px;
   }
 
-  input[type="submit"] {
+  .btn-send {
     width: 20%;
   }
 
@@ -538,7 +596,7 @@ footer {
     grid-area: social;
     width: 10%;
   }
-  input[type="submit"] {
-    width: 30%;
+  .btn-send {
+    width: 20%;
   }
 }
