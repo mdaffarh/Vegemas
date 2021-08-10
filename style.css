@@ -221,10 +221,11 @@ html {
   display: grid;
   grid-template-columns: 1fr 1fr;
   width: 50%;
-  padding-top: 30px;
+  padding-top: 10px;
 
-  color: #66a266;
+  color: #006400;
   font-size: 1.4em;
+  font-weight: 300;
 }
 
 /* Products */
@@ -340,7 +341,8 @@ html {
 /* Alert and Loading */
 .my-alert {
   display: none;
-  place-items: center;
+  justify-content: space-between;
+  align-items: center;
   padding: 20px;
   margin-bottom: 20px;
 
@@ -349,7 +351,6 @@ html {
 }
 
 .btn-close {
-  margin-left: 170px;
   height: 20px;
   background-color: none;
 }
@@ -380,12 +381,11 @@ html {
 .btn-loading {
   display: none;
   box-sizing: border-box;
-  width: 10%;
+  width: 15%;
   padding: 10px 10px;
   background-color: #006400;
   border: none;
   border-radius: 3px;
-  box-shadow: 0 0 5px 0 rgb(0 0 0 / 25%);
 
   font-family: inherit;
   color: white;
@@ -417,7 +417,6 @@ textarea {
   padding: 15px 20px;
   border: 2px solid #ccc;
   border-radius: 4px;
-  /* box-shadow: 0 0 5px 0 rgb(0 0 0 / 25%); */
 
   font-size: 16px;
   font-family: inherit;
@@ -432,7 +431,6 @@ textarea {
   background-color: #006400;
   border: none;
   border-radius: 3px;
-  /* box-shadow: 0 0 5px 0 rgb(0 0 0 / 25%); */
 
   font-family: inherit;
   color: white;
@@ -513,7 +511,8 @@ footer {
     border-radius: 3px;
   }
 
-  .btn-send {
+  .btn-send,
+  .btn-loading {
     width: 20%;
   }
 
@@ -636,7 +635,8 @@ footer {
     grid-area: logo;
     width: 25%;
   }
-  .btn-send {
-    width: 20%;
+  .btn-send,
+  .btn-loading {
+    width: 25%;
   }
 }

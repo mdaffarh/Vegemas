@@ -15,9 +15,28 @@ form.addEventListener("submit", (e) => {
   e.preventDefault();
   fetch(scriptURL, { method: "POST", body: new FormData(form) })
     .then((response) => {
+      // Remove Loading
+      document.getElementById("btn-loading").style.display = "none";
       // Reset Form
       form.reset();
-      alert("Your message has been sent!", response);
+      // Add Alert
+      document.getElementById("my-alert").style.display = "flex";
+      // Add Send
+      document.getElementById("btn-send").style.display = "block";
     })
     .catch((error) => console.error("Error!", error.message));
 });
+
+// Function
+
+function btnLoading() {
+  // Add Loading
+  document.getElementById("btn-loading").style.display = "block";
+  // Remove Send
+  document.getElementById("btn-send").style.display = "none";
+}
+
+function btnClose() {
+  // Remove Alert
+  document.getElementById("my-alert").style.display = "none";
+}
