@@ -65,7 +65,6 @@ html {
 .features {
   display: grid;
   place-content: center;
-  background-color: black;
   border-radius: 3px;
 
   color: #197419;
@@ -205,7 +204,7 @@ html {
 /* About */
 .about {
   display: grid;
-  gap: 5px;
+  gap: 10px;
   place-items: center;
   background-color: white;
   border-radius: 3px;
@@ -220,7 +219,7 @@ html {
 .about-content {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  width: 50%;
+  width: 60%;
   padding-top: 10px;
 
   color: #006400;
