@@ -122,7 +122,7 @@ html {
   list-style: none;
 }
 
-.menu a {
+.menu-list a {
   display: block;
   padding: 10px;
   background-color: rgba(0, 100, 0, 1);
@@ -137,7 +137,7 @@ html {
   transition: all 0.2s;
 }
 
-.menu a:hover {
+.menu-list a:hover {
   background-color: rgba(0, 100, 0, 0.8);
 }
 
@@ -208,6 +208,7 @@ html {
   place-items: center;
   background-color: white;
   border-radius: 3px;
+  padding-bottom: 30px;
 
   text-align: center;
 }
@@ -219,12 +220,90 @@ html {
 .about-content {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  width: 60%;
+  width: 80%;
   padding-top: 10px;
 
   color: #006400;
   font-size: 1.4em;
   font-weight: 300;
+}
+.about-content p {
+  padding: 0 10px;
+}
+/* Visi */
+.visi {
+  display: grid;
+  gap: 10px;
+  background-color: white;
+  place-items: center;
+  border-radius: 3px;
+  padding-bottom: 30px;
+}
+
+.visi h1 {
+  color: #006400;
+}
+
+.visi-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: start;
+  width: 80%;
+  padding-top: 10px;
+
+  color: #006400;
+  font-size: 1.4em;
+  font-weight: 300;
+}
+
+.visi-content h4 {
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+/* Distribusi */
+.dist {
+  text-align: center;
+  padding: 20px 0;
+}
+
+.dist h1 {
+  color: #006400;
+  grid-column: 1/-1;
+}
+
+.dist-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 10px;
+  justify-items: center;
+
+  background-color: white;
+  border-radius: 3px;
+  margin: 20px 0;
+
+  text-align: center;
+
+  color: #006400;
+  font-size: 1.4em;
+  font-weight: 300;
+}
+
+.dist-item {
+  width: 60%;
+  padding: 20px;
+  background-color: white;
+  border-radius: 3px;
+  box-shadow: 0 0 5px 0 rgb(0 0 0 / 25%);
+}
+
+.dist-item:hover {
+  box-shadow: 0 0 10px 0 rgb(0 0 0 / 25%);
+  cursor: pointer;
+}
+
+.dist-item span {
+  font-size: 3em;
 }
 
 /* Products */
@@ -236,28 +315,37 @@ html {
   margin: 50px;
   padding-top: 100px;
 
-  color: #197419;
   text-align: center;
+  color: #197419;
 }
 .products h1 {
   grid-column: 1/-1;
 
   color: #006400;
 }
-
+.product-header {
+  grid-column: 1/-1;
+  width: 90%;
+  font-size: 1.4em;
+  font-weight: 300;
+}
 .product {
-  width: 60%;
-  padding: 20px;
+  width: 70%;
+  padding: 10px;
   background-color: white;
   border-radius: 3px;
-  box-shadow: 0 0 10px 0 rgb(0 0 0 / 25%);
+  box-shadow: 0 0 5px 0 rgb(0 0 0 / 25%);
+}
 
+.product:hover {
+  box-shadow: 0 0 10px 0 rgb(0 0 0 / 25%);
   cursor: pointer;
 }
 
 .product h3 {
   padding-top: 10px;
 
+  font-weight: 600;
   font-size: 1.5em;
 }
 
@@ -272,7 +360,7 @@ html {
     "hd hd hd"
     "left form form"
     "left form form";
-  grid-template-columns: 2fr 3fr;
+  grid-template-columns: 3fr 4fr;
   gap: 20px;
   margin: 0 50px;
   box-sizing: border-box;
@@ -311,7 +399,7 @@ html {
 .social {
   display: flex;
   align-items: center;
-  padding-top: 50px;
+  padding-top: 10px;
   grid-area: ig;
 
   transition: all 0.5s;
@@ -328,8 +416,10 @@ html {
   text-decoration: none;
 }
 .social a:hover {
-  background-color: rgb(0, 0, 0, 0.1);
+  background-color: rgb(0, 0, 0, 0.5);
   border-radius: 1px;
+
+  text-decoration: underline;
 }
 
 .location {
@@ -444,8 +534,9 @@ textarea {
 footer {
   display: grid;
   grid-template-areas:
-    "logo"
-    "creator";
+    "logo logo"
+    "igwa igwa"
+    "creator creator";
   gap: 20px;
   justify-items: center;
   margin-top: 50px;
@@ -459,6 +550,20 @@ footer {
 
 .creator {
   grid-area: creator;
+}
+
+.social-footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  grid-area: igwa;
+  transition: all 0.5s;
+  width: 7%;
+}
+
+.social-footer a:hover {
+  background-color: rgb(0, 0, 0, 0.1);
+  border-radius: 3px;
 }
 
 /* Responsive Breakpoint */
@@ -524,7 +629,8 @@ footer {
   .desc {
     z-index: -1;
   }
-  .social img {
+  .social img,
+  .social-footer {
     width: 10%;
   }
 }
@@ -607,6 +713,10 @@ footer {
   }
   .social img {
     width: 5%;
+  }
+
+  .social-footer {
+    width: 15%;
   }
 }
 @media (max-width: 600px) {
