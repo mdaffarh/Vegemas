@@ -51,10 +51,10 @@ html {
 
 .hero {
   grid-area: hero;
-  min-height: 67vh;
+  min-height: 78vh;
   padding: 50px;
   background-image: url(img/hero.jpg);
-  background-position: center;
+  background-size: cover;
   border-radius: 3px;
 }
 
@@ -594,6 +594,7 @@ footer {
     padding: 5px;
     margin-bottom: 5px;
     background-color: #006400;
+    background-size: auto;
     border-radius: 3px;
 
     color: white;
